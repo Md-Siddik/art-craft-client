@@ -2,8 +2,9 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { GoogleAuthProvider, GithubAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { AuthContext } from "../../providers/AuthProvider";
+import { AuthContext } from "../../AuthProviders/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
