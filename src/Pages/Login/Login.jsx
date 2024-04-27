@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
-import { GoogleAuthProvider, GithubAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, getAuth } from "firebase/auth";
 
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../AuthProviders/AuthProvider";
@@ -38,54 +38,48 @@ const Login = () => {
         }
     }
     const handleGoogleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const loggedInUser = result.user;
-                setUser(loggedInUser);
-                navigate(location?.state ? location.state : '/');
-                console.log(user);
-            })
-            .catch(error => {
-                toast.error(error)
-            })
+                signInWithPopup(auth, googleProvider)
+                    .then(result => {
+                        const loggedInUser = result.user;
+                        setUser(loggedInUser);
+                        navigate(location?.state ? location.state : '/');
+                        console.log(user);
+                    })
+                    .catch(error => {
+                        toast.error(error)
+                    })
     }
     const handleGithubSignIn = () => {
-        signInWithPopup(auth, githubProvider)
-            .then(result => {
-                const loggedInUser = result.user;
-                setUser(loggedInUser);
-                navigate(location?.state ? location.state : '/');
-                console.log(user);
-            })
-            .catch(error => {
-                toast.error(error)
-            })
+                signInWithPopup(auth, githubProvider)
+                    .then(result => {
+                        const loggedInUser = result.user;
+                        setUser(loggedInUser);
+                        navigate(location?.state ? location.state : '/');
+                        console.log(user);
+                    })
+                    .catch(error => {
+                        toast.error(error)
+                    })
     }
     return (
         <div>
             <Helmet>
                 <title>Techno-Real-Estate | Login</title>
             </Helmet>
-            <div className="w-[500px] m-auto pb-24">
-                <h1 className="text-3xl my-10 text-center">Please Login</h1>
-                <form onSubmit={handleLogin} className="md:w-full mx-auto">
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Email</span>
-                        </label>
-                        <input type="email" required name="email" placeholder="email" className="input input-bordered" />
+            <div className="w-[600px] m-auto pb-24 mt-16 border-2 rounded-xl">
+                <h1 className="text-3xl my-10 text-center">Login</h1>
+                <form onSubmit={handleLogin} className="md:w-[500px] mx-auto p-8">
+                    <div className="form-control pb-6">
+                        <input type="email" required name="email" placeholder="Email" className="input input-bordered rounded-full" />
                     </div>
                     <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">Password</span>
-                        </label>
-                        <input type="password" required name="password" placeholder="password" className="input input-bordered" />
+                        <input type="password" required name="Password" placeholder="password" className="input input-bordered rounded-full" />
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary rounded-full">Login</button>
                     </div>
                 </form>
-                <div className="flex justify-center gap-8 pt-8">
+                <div className="flex justify-center gap-8 pt-4">
                     <button onClick={handleGoogleSignIn} className="btn text-2xl">
                         <FaGoogle></FaGoogle>
                     </button>
