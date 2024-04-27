@@ -13,6 +13,7 @@ import Register from './Register/Register.jsx';
 import AuthProvider from './AuthProviders/AuthProvider.jsx';
 import AddCraftItem from './Pages/AddCraftItem/AddCraftItem.jsx';
 import PrivetRoute from './PrivetRouter/PrivetRouter.jsx';
+import AllArt from './Pages/AllArt/AllArt.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/allArt',
+        element: <AllArt></AllArt>
       }
     ]
   },

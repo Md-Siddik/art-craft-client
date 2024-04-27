@@ -13,11 +13,10 @@ const Navbar = () => {
 
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/userProfile">All Art & craft</NavLink></li>
+        <li><NavLink to="/allArt">All Art & craft</NavLink></li>
         <li><NavLink to="/addCraft">Add Craft</NavLink></li>
         <li><NavLink to="/best">My Art&Craft</NavLink></li>
     </>
-    console.log(user)
 
     return (
         <div className="container mx-auto flex">
