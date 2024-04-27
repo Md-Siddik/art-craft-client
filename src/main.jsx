@@ -11,6 +11,8 @@ import Error from './Pages/Error/Error.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Register from './Register/Register.jsx';
 import AuthProvider from './AuthProviders/AuthProvider.jsx';
+import AddCraftItem from './Pages/AddCraftItem/AddCraftItem.jsx';
+import PrivetRoute from './PrivetRouter/PrivetRouter.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>
         // loader: () => fetch('')
+      },
+      {
+        path: '/addCraft',
+        element: <PrivetRoute><AddCraftItem></AddCraftItem></PrivetRoute>
       },
       {
         path: '/login',
