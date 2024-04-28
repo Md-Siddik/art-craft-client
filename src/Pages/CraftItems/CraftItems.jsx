@@ -1,16 +1,25 @@
+import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 
 const CraftItems = () => {
+    const [items,setItems] = useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/artCraft')
+        .then(res => res.json())
+        .then(data => setItems(data))
+    },[])
+
+    const itemsLimit = items.slice(0,6);
+    console.log(itemsLimit)
+
     return (
         <div className="container mx-auto">
             <h1 className="text-4xl text-center py-16">Craft Items</h1>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 w-fit m-auto">
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                {
+                    itemsLimit.map(item => <Card key={item._id} item={item}></Card>)
+                }
             </div>
         </div>
     );
