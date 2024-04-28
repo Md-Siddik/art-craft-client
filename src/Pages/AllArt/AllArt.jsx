@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
-import Card from "../Card/Card";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AllArt = () => {
+
+    const artCrafts = useLoaderData();
+
     return (
         <div className="container mx-auto mb-16">
             <h1 className="text-4xl text-center py-16">All Art and Craft</h1>
@@ -10,117 +12,41 @@ const AllArt = () => {
                     {/* head */}
                     <thead>
                         <tr className="text-2xl">
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th>Ratting</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th className="text-center">Price</th>
+                            <th className="text-center">Ratting</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
-                        <tr>
-                            <td>
-                                <div className="flex items-center gap-3">
-                                    <div className="avatar">
-                                        <div className="w-12 h-12">
-                                            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Avatar Tailwind CSS Component" />
+
+                        {
+                            artCrafts.map(items => <tr key={items._id}>
+                                <td>
+                                    <div className="flex items-center gap-3">
+                                        <div className="avatar">
+                                            <div className="w-24 h-24">
+                                                <img className="w-full h-full" src={items.image} alt="Avatar Tailwind CSS Component" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="font-bold text-xl">{items.item_name}</div>
+                                            <div className="text-sm opacity-50">{items.subcategory_Name}</div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div className="font-bold text-xl">Item_name</div>
-                                        <div className="text-sm opacity-50">Subcategory_name</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td className="text-lg w-[400px]">
-                                Short description about Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, minima!
-                            </td>
-                            <td className="text-2xl">20000$</td>
-                            <td className="text-2xl">4.8</td>
-                            <th>
-                                <Link to="/details">
-                                    <button className="btn">View Details</button>
-                                </Link>
-                            </th>
-                        </tr>
-                        {/* row 2 */}
-                        <tr>
-                            <td>
-                                <div className="flex items-center gap-3">
-                                    <div className="avatar">
-                                        <div className="w-12 h-12">
-                                            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="font-bold text-xl">Item_name</div>
-                                        <div className="text-sm opacity-50">Subcategory_name</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td className="text-lg w-[400px]">
-                                Short description about Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, minima!
-                            </td>
-                            <td className="text-2xl">20000$</td>
-                            <td className="text-2xl">4.8</td>
-                            <th>
-                                <Link to="/details">
-                                    <button className="btn">View Details</button>
-                                </Link>
-                            </th>
-                        </tr>
-                        {/* row 3 */}
-                        <tr>
-                            <td>
-                                <div className="flex items-center gap-3">
-                                    <div className="avatar">
-                                        <div className="w-12 h-12">
-                                            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="font-bold text-xl">Item_name</div>
-                                        <div className="text-sm opacity-50">Subcategory_name</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td className="text-lg w-[400px]">
-                                Short description about Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, minima!
-                            </td>
-                            <td className="text-2xl">20000$</td>
-                            <td className="text-2xl">4.8</td>
-                            <th>
-                                <Link to="/details">
-                                    <button className="btn">View Details</button>
-                                </Link>
-                            </th>
-                        </tr>
-                        {/* row 4 */}
-                        <tr>
-                            <td>
-                                <div className="flex items-center gap-3">
-                                    <div className="avatar">
-                                        <div className="w-12 h-12">
-                                            <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="font-bold text-xl">Item_name</div>
-                                        <div className="text-sm opacity-50">Subcategory_name</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td className="text-lg w-[400px]">
-                                Short description about Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, minima!
-                            </td>
-                            <td className="text-2xl">20000$</td>
-                            <td className="text-2xl">4.8</td>
-                            <th>
-                                <Link to="/details">
-                                    <button className="btn">View Details</button>
-                                </Link>
-                            </th>
-                        </tr>
+                                </td>
+                                <td className="text-lg w-[400px]">
+                                    {items.description}
+                                </td>
+                                <td className="text-2xl text-center">{items.price}$</td>
+                                <td className="text-2xl text-center">{items.rating}</td>
+                                <th>
+                                    <Link to={`/artCraft/${items._id}`}>
+                                        <button className="btn">View Details</button>
+                                    </Link>
+                                </th>
+                            </tr>)
+                        }
                     </tbody>
 
                 </table>

@@ -26,8 +26,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
-        // loader: () => fetch('')
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/artCraft')
       },
       {
         path: '/addCraft',
@@ -43,11 +43,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/allArt',
-        element: <AllArt></AllArt>
+        element: <AllArt></AllArt>,
+        loader: () => fetch('http://localhost:5000/artCraft')
       },
       {
-        path: '/details',
-        element: <PrivetRoute><Details></Details></PrivetRoute>
+        path: '/artCraft/:id',
+        element: <PrivetRoute><Details></Details></PrivetRoute>,
+        loader: () => fetch('http://localhost:5000/artCraft')
       },
       {
         path: '/myList',
