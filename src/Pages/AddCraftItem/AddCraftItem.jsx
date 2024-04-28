@@ -1,9 +1,37 @@
 
 const AddCraftItem = () => {
     const handleAdd = e => {
+        event.preventDefault();
+
+        const form = e.target;
+
+        const image = form.image.value;
+        const item_name = form.item_name.value;
+        const subcategory_Name = form.subcategory_Name.value;
+        const stockStatus = form.stockStatus.value;
+        const price = form.price.value;
+        const email = form.email.value;
+        const name = form.name.value;
+        const rating = form.rating.value;
+        const customization = form.customization.value;
+        const processing_time = form.processing_time.value;
+        const description = form.description.value;
+
+        const newCraftItem = {image, item_name, subcategory_Name, stockStatus, price, email, name, rating, customization, processing_time, description}
+
+        fetch('http://localhost:5000/artCraft', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCraftItem)
+        })
+        .then(res=>res.json)
+        .then(data => {
+            console.log(data);
+        })
 
     }
-
     return (
         <div>
             <div className="lg:w-[1000px] m-auto pb-24 mt-16 border-2 rounded-xl">
@@ -18,13 +46,13 @@ const AddCraftItem = () => {
                                 <input type="text" required name="item_name" placeholder="item_name" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
-                                <input type="email" required name="subcategory_Name" placeholder="subcategory_Name" className="input input-bordered rounded-full" />
+                                <input type="text" name="subcategory_Name" placeholder="subcategory_Name" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
-                                <input type="email" required name="stockStatus" placeholder="stockStatus" className="input input-bordered rounded-full" />
+                                <input type="text" required name="stockStatus" placeholder="stockStatus" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
-                                <input type="email" required name="price" placeholder="price" className="input input-bordered rounded-full" />
+                                <input type="text" required name="price" placeholder="price" className="input input-bordered rounded-full" />
                             </div>
                         </div>
                         <div className="w-[450px]">
@@ -33,13 +61,13 @@ const AddCraftItem = () => {
 " className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
-                                <input type="email" required name="name" placeholder="User Name" className="input input-bordered rounded-full" />
+                                <input type="text" required name="name" placeholder="User Name" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
-                                <input type="email" required name="rating" placeholder="rating" className="input input-bordered rounded-full" />
+                                <input type="text" required name="rating" placeholder="rating" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
-                                <input type="email" required name="customization" placeholder="customization" className="input input-bordered rounded-full" />
+                                <input type="text" required name="customization" placeholder="customization" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
                                 <input type="text" required name="processing_time" placeholder="processing_time" className="input input-bordered rounded-full" />
@@ -53,7 +81,7 @@ const AddCraftItem = () => {
                             </div>
                     </div>
                     <div className="form-control w-[200px] mt-6 mx-auto">
-                        <button className="btn btn-primary rounded-full text-xl">Add</button>
+                        <input type="submit" value="Add"  className="btn btn-primary rounded-full text-xl"/>
                     </div>
                 </form>
             </div>
