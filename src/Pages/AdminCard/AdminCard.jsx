@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const AdminCard = () => {
     return (
@@ -19,7 +20,10 @@ const AdminCard = () => {
                     </div>
                     <h1 className="text-4xl font-bold">20000$</h1>
                     <div className="card-actions justify-center gap-16">
-                        <button className="btn btn-primary text-lg">Update</button>
+                        <Link to="/update">
+                            <button className="btn btn-primary text-lg">Update</button>
+                        </Link>
+                        
                         <button className="btn btn-error text-lg">Delete</button>
                     </div>
                 </div>

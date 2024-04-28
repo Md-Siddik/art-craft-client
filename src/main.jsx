@@ -16,6 +16,7 @@ import PrivetRoute from './PrivetRouter/PrivetRouter.jsx';
 import AllArt from './Pages/AllArt/AllArt.jsx';
 import Details from './Pages/Details/Details.jsx';
 import MyList from './Pages/MyList/MyList.jsx';
+import Update from './Pages/Update/Update.jsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: '/myList',
         element: <PrivetRoute><MyList></MyList></PrivetRoute>
+      },
+      {
+        path: '/update',
+        element: <PrivetRoute><Update></Update></PrivetRoute>
       }
     ]
   },
