@@ -21,14 +21,20 @@ const AddCraftItem = () => {
                                 <input type="email" required name="subcategory_Name" placeholder="subcategory_Name" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
-                                <input type="email" required name="description" placeholder="short description
-" className="input input-bordered rounded-full" />
+                                <input type="email" required name="stockStatus" placeholder="stockStatus" className="input input-bordered rounded-full" />
                             </div>
                             <div className="form-control pb-6">
                                 <input type="email" required name="price" placeholder="price" className="input input-bordered rounded-full" />
                             </div>
                         </div>
                         <div className="w-[450px]">
+                            <div className="form-control pb-6">
+                                <input type="email" required name="email" placeholder="User Email
+" className="input input-bordered rounded-full" />
+                            </div>
+                            <div className="form-control pb-6">
+                                <input type="email" required name="name" placeholder="User Name" className="input input-bordered rounded-full" />
+                            </div>
                             <div className="form-control pb-6">
                                 <input type="email" required name="rating" placeholder="rating" className="input input-bordered rounded-full" />
                             </div>
@@ -38,17 +44,14 @@ const AddCraftItem = () => {
                             <div className="form-control pb-6">
                                 <input type="email" required name="processing_time" placeholder="processing_time" className="input input-bordered rounded-full" />
                             </div>
-                            <div className="form-control pb-6">
-                                <input type="email" required name="stockStatus" placeholder="stockStatus" className="input input-bordered rounded-full" />
-                            </div>
-                            <div className="form-control pb-6">
-                                <input type="email" required name="email" placeholder="User Email
-" className="input input-bordered rounded-full" />
-                            </div>
                         </div>
                     </div>
-                    <div className="form-control pb-6">
-                        <input type="email" required name="name" placeholder="User Name" className="input input-bordered rounded-full" />
+                    <div>
+
+                        <div className="form-control pb-6">
+                            <input type="email" required name="description" placeholder="short description
+" className="input input-bordered rounded-full" />
+                        </div>
                     </div>
                     <div className="form-control w-[200px] mt-6 mx-auto">
                         <button className="btn btn-primary rounded-full text-xl">Add</button>

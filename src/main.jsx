@@ -14,6 +14,8 @@ import AuthProvider from './AuthProviders/AuthProvider.jsx';
 import AddCraftItem from './Pages/AddCraftItem/AddCraftItem.jsx';
 import PrivetRoute from './PrivetRouter/PrivetRouter.jsx';
 import AllArt from './Pages/AllArt/AllArt.jsx';
+import Details from './Pages/Details/Details.jsx';
+import MyList from './Pages/MyList/MyList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
       {
         path: '/allArt',
         element: <AllArt></AllArt>
+      },
+      {
+        path: '/details',
+        element: <PrivetRoute><Details></Details></PrivetRoute>
+      },
+      {
+        path: '/myList',
+        element: <PrivetRoute><MyList></MyList></PrivetRoute>
       }
     ]
   },
