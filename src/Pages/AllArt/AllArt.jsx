@@ -39,7 +39,7 @@ const AllArt = () => {
                                     {items.description}
                                 </td>
                                 <td className="text-2xl text-center">{items.price}$</td>
-                                <td className="text-2xl text-center">{items.rating}</td>
+                                <td className="text-2xl text-center">{items.rating}/5</td>
                                 <th>
                                     <Link to={`/artCraft/${items._id}`}>
                                         <button className="btn">View Details</button>

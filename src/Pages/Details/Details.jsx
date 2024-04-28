@@ -36,7 +36,7 @@ const Details = () => {
                             </div>
                             <div className="flex gap-8">
                                 <p className="py-4 text-xl bg-green-500 dark:text-white px-6 rounded-full">{singleArt.stockStatus} </p>
-                                <p className="py-4 text-xl bg-purple-500 dark:text-white px-6 rounded-full">{singleArt.rating} </p>
+                                <p className="py-4 text-xl bg-purple-500 dark:text-white px-6 rounded-full">{singleArt.rating}/5 </p>
                                 <div className="flex gap-4">
                                     <p className="py-4 text-xl">Customizable : </p>
                                     <p className="py-4 text-xl bg-cyan-500 dark:text-white px-6 rounded-full">{singleArt.customization} </p>

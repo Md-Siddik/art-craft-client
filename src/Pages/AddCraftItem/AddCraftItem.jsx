@@ -35,6 +35,7 @@ const AddCraftItem = () => {
                 icon: 'success',
                 confirmButtonText: 'Cool'
             })
+        
         })
 
     }
@@ -83,7 +84,7 @@ const AddCraftItem = () => {
                     <div>
                         
                     <div className="form-control pb-6">
-                                <textarea name="description" placeholder="Short description" className="input input-bordered h-28 rounded-xl p-4" rows="4" cols="50"></textarea>
+                                <textarea name="description" required placeholder="Short description" className="input input-bordered h-28 rounded-xl p-4" rows="4" cols="50"></textarea>
                             </div>
                     </div>
                     <div className="form-control w-[200px] mt-6 mx-auto">
