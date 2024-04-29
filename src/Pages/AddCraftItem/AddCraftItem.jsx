@@ -33,7 +33,7 @@ const AddCraftItem = () => {
                 title: 'Success!',
                 text: 'Item Added Successfully',
                 icon: 'success',
-                confirmButtonText: 'Cool'
+                confirmButtonText: 'Great'
             })
         
         })
