@@ -6,12 +6,12 @@ const Features = () => {
                 <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                     <div>
                         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-white-500">About Our Products</h2>
-                        <p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-white-600">Quando cetero his ne, eum admodum sapientem ut.</p>
+                        <p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-white-600">We provide best quality product and service for all over the world.</p>
                     </div>
                     <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                         <div>
-                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-white-900">Ad vix debet docendi</h3>
-                            <p className="mt-3 text-lg dark:text-white-600">Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates.</p>
+                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-white-900">Definition of our product</h3>
+                            <p className="mt-3 text-lg dark:text-white-600">Painting is a form of artistic expression involving the application of pigment to a surface, typically with brushes or other tools.</p>
                             <div className="mt-12 space-y-12">
                                 <div className="flex">
                                     <div className="flex-shrink-0">
@@ -22,8 +22,8 @@ const Features = () => {
                                         </div>
                                     </div>
                                     <div className="ml-4">
-                                        <h4 className="text-lg font-medium leading-6 dark:text-white-900">Per ei quaeque sensibus</h4>
-                                        <p className="mt-2 dark:text-white-600">Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.</p>
+                                        <h4 className="text-lg font-medium leading-6 dark:text-white-900">Exploring the Essence of Craftsmanship</h4>
+                                        <p className="mt-2 dark:text-white-600">Artisanal creations encompass handmade items crafted with meticulous attention to detail, reflecting the skill, tradition, and passion of the artisan.</p>
                                     </div>
                                 </div>
                                 <div className="flex">
@@ -35,8 +35,8 @@ const Features = () => {
                                         </div>
                                     </div>
                                     <div className="ml-4">
-                                        <h4 className="text-lg font-medium leading-6 dark:text-white-900">Cu imperdiet posidonium sed</h4>
-                                        <p className="mt-2 dark:text-white-600">Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.</p>
+                                        <h4 className="text-lg font-medium leading-6 dark:text-white-900">Understanding the Aesthetic and Functional Dimensions</h4>
+                                        <p className="mt-2 dark:text-white-600">Art and craft products marry aesthetic appeal with practical functionality, blurring the lines between artistry and utility.</p>
                                     </div>
                                 </div>
                                 <div className="flex">
@@ -48,14 +48,14 @@ const Features = () => {
                                         </div>
                                     </div>
                                     <div className="ml-4">
-                                        <h4 className="text-lg font-medium leading-6 dark:text-white-900">Nulla omittam sadipscing mel ne</h4>
-                                        <p className="mt-2 dark:text-white-600">At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.</p>
+                                        <h4 className="text-lg font-medium leading-6 dark:text-white-900">Unveiling the Intersection of Tradition, Innovation</h4>
+                                        <p className="mt-2 dark:text-white-600">Artisanal workmanship thrives at the crossroads of tradition, innovation, and creativity, weaving together time-honored techniques with contemporary flair.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div aria-hidden="true" className="mt-10 lg:mt-0">
-                            <img src="https://source.unsplash.com/random/360x480" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-white-500" />
+                            <img src="https://i.ibb.co/T0Kw7jC/maxresdefault.jpg" alt="" className="mx-auto rounded-lg shadow-lg dark:bg-white-500" />
                         </div>
                     </div>
                     

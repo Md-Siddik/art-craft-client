@@ -17,7 +17,7 @@ const AdminCard = ({ list }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/artCraft/${_id}`, {
+                fetch(`https://art-craft-server-beryl.vercel.app/artCraft/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

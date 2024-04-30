@@ -8,7 +8,7 @@ const MyList = () => {
     const [all, setAll] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/artCraft/${user?.email}`)
+        fetch(`https://art-craft-server-beryl.vercel.app/artCraft/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);

@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/artCraft')
+        loader: () => fetch('https://art-craft-server-beryl.vercel.app/artCraft')
       },
       {
         path: 'addCraft',
@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       {
         path: 'allArt',
         element: <AllArt></AllArt>,
-        loader: () => fetch('http://localhost:5000/artCraft')
+        loader: () => fetch('https://art-craft-server-beryl.vercel.app/artCraft')
       },
       {
         path: 'artCraft/:id',
         element: <PrivetRoute><Details></Details></PrivetRoute>,
-        loader: () => fetch('http://localhost:5000/artCraft')
+        loader: () => fetch('https://art-craft-server-beryl.vercel.app/artCraft')
       },
       {
         path: 'myList',
@@ -59,12 +59,12 @@ const router = createBrowserRouter([
       {
         path: 'update/:id',
         element: <PrivetRoute><Update></Update></PrivetRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/artCraft/update/${params.id}`)
+        loader: ({params}) => fetch(`https://art-craft-server-beryl.vercel.app/artCraft/update/${params.id}`)
       },
       {
         path: 'allCategory/:subcategory_Name',
         element: <AllCategory></AllCategory>,
-        loader: () => fetch(`http://localhost:5000/artCraft`)
+        loader: () => fetch(`https://art-craft-server-beryl.vercel.app/artCraft`)
       }
     ]
   },

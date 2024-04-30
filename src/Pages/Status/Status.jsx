@@ -14,7 +14,7 @@ const Status = () => {
                         </div>
                         <div className="flex items-center justify-between flex-1 p-3">
                             <p className="text-2xl font-semibold">200+</p>
-                            <p>Projects</p>
+                            <p>Sells</p>
                         </div>
                     </div>
                     <div className="flex overflow-hidden rounded-lg dark:bg-gray-50 dark:text-gray-800">

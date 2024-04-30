@@ -28,7 +28,7 @@ const Update = () => {
 
         const updatedCraftItem = {image, item_name, email,name, subcategory_Name, stockStatus, price, rating, customization, processing_time, description}
 
-        fetch(`http://localhost:5000/artCraft/update/${_id}`, {
+        fetch(`https://art-craft-server-beryl.vercel.app/artCraft/update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

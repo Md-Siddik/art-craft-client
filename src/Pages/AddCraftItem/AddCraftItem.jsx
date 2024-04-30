@@ -20,7 +20,7 @@ const AddCraftItem = () => {
 
         const newCraftItem = {image, item_name, subcategory_Name, stockStatus, price, email, name, rating, customization, processing_time, description}
 
-        fetch('http://localhost:5000/artCraft', {
+        fetch('https://art-craft-server-beryl.vercel.app/artCraft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

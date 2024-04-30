@@ -7,7 +7,7 @@ const ArtCraft = () => {
     const [items,setItems] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/artCategory')
+        fetch('https://art-craft-server-nb4h9j9x2-siddiks-projects-06015787.vercel.app/artCategory')
         .then(res => res.json())
         .then(data => setItems(data))
     },[])
