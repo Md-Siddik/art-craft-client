@@ -11,7 +11,6 @@ const CraftItems = () => {
     },[])
 
     const itemsLimit = items.slice(0,6);
-    console.log(itemsLimit)
 
     return (
         <div className="container mx-auto">

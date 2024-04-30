@@ -77,7 +77,7 @@ const AdminCard = ({ list }) => {
                 <div className="w-[55%]">
                     <div className="p-8">
                         <h1 className="text-2xl font-bold">{item_name}</h1>
-                        <div className="flex gap-24 text-xl my-4">
+                        <div className="flex gap-16 text-xl my-4">
                             <p>{stockStatus}</p>
                             <p>Customization : {customization}</p>
                         </div>
@@ -86,12 +86,10 @@ const AdminCard = ({ list }) => {
                             <p className="text-2xl">{rating}/5</p>
                         </div>
                         <div className="flex gap-8">
-                            <Link>
+                            <Link to={`/update/${_id}`}>
                                 <button className="btn btn-primary text-xl">Update</button>
                             </Link>
-                            <Link>
-                                <button onClick={() => handleDelete(_id)} className="btn btn-error text-xl">Delete</button>
-                            </Link>
+                            <button onClick={() => handleDelete(_id)} className="btn btn-error text-xl">Delete</button>
                             <Link to={`/artCraft/${_id}`}>
                                 <button className="btn btn-success text-xl">Details</button>
                             </Link>

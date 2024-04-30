@@ -43,7 +43,6 @@ const Login = () => {
                         const loggedInUser = result.user;
                         setUser(loggedInUser);
                         navigate(location?.state ? location.state : '/');
-                        console.log(user);
                     })
                     .catch(error => {
                         toast.error(error)
@@ -73,7 +72,7 @@ const Login = () => {
                         <input type="email" required name="email" placeholder="Email" className="input input-bordered rounded-full" />
                     </div>
                     <div className="form-control">
-                        <input type="password" required name="Password" placeholder="password" className="input input-bordered rounded-full" />
+                        <input type="password" required name="password" placeholder="password" className="input input-bordered rounded-full" />
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary rounded-full">Login</button>

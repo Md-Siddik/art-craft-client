@@ -17,6 +17,7 @@ import AllArt from './Pages/AllArt/AllArt.jsx';
 import Details from './Pages/Details/Details.jsx';
 import MyList from './Pages/MyList/MyList.jsx';
 import Update from './Pages/Update/Update.jsx';
+import AllCategory from './Pages/AllCategory/AllCategory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,34 +31,40 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/artCraft')
       },
       {
-        path: '/addCraft',
+        path: 'addCraft',
         element: <PrivetRoute><AddCraftItem></AddCraftItem></PrivetRoute>
       },
       {
-        path: '/login',
+        path: 'login',
         element: <Login></Login>
       },
       {
-        path: '/register',
+        path: 'register',
         element: <Register></Register>
       },
       {
-        path: '/allArt',
+        path: 'allArt',
         element: <AllArt></AllArt>,
         loader: () => fetch('http://localhost:5000/artCraft')
       },
       {
-        path: '/artCraft/:id',
+        path: 'artCraft/:id',
         element: <PrivetRoute><Details></Details></PrivetRoute>,
         loader: () => fetch('http://localhost:5000/artCraft')
       },
       {
-        path: '/myList',
+        path: 'myList',
         element: <PrivetRoute><MyList></MyList></PrivetRoute>
       },
       {
-        path: '/update',
-        element: <PrivetRoute><Update></Update></PrivetRoute>
+        path: 'update/:id',
+        element: <PrivetRoute><Update></Update></PrivetRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/artCraft/update/${params.id}`)
+      },
+      {
+        path: 'allCategory/:subcategory_Name',
+        element: <AllCategory></AllCategory>,
+        loader: () => fetch(`http://localhost:5000/artCraft`)
       }
     ]
   },

@@ -27,7 +27,7 @@ const AddCraftItem = () => {
             },
             body: JSON.stringify(newCraftItem)
         })
-        .then(res=>res.json)
+        .then(res=>res.json())
         .then(data => {
             Swal.fire({
                 title: 'Success!',
