@@ -42,7 +42,7 @@ const Navbar = () => {
                     }
                     {
                         user ?
-                            <button onClick={handleSignOut} className="btn">Log Out</button>
+                            <button onClick={handleSignOut} className="btn lg:block hidden">Log Out</button>
                             :
                             <Link to="/login">
                                 <button className="btn btn-outline">Login</button>

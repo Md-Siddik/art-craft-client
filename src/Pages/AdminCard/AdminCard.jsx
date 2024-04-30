@@ -36,37 +36,6 @@ const AdminCard = ({ list }) => {
     }
 
     return (
-        // <div className="container mx-auto">
-        //     <div data-aos="zoom-in" className="w-[350px] bg-base-100 border-[1px] border-solid h-full">
-        //         <figure className="h-[220px] bg-gray-300">
-        //             <img src={list.image} className="w-full h-full" />
-        //         </figure>
-        //         <div className="card-body">
-        //             <div className="w-full text-left">
-        //                 <h2 className="card-title text-2xl py-4 flex lists-start">{list.item_name}</h2>
-        //                 <p className="pb-4">{list.subcategory_Name} by {list.name}</p>
-        //                 <div className="w-full flex gap-24 text-lg py-2 border-y-[1px]">
-        //                     <span>{list.stockStatus}</span>
-        //                     <span>Rating : {list.rating}</span>
-        //                 </div>
-        //                 <div className="w-full flex gap-24 text-lg py-2 border-y-[1px]">
-        //                     <span>Customization : {list.customization}</span>
-        //                 </div>
-        //             </div>
-        //             <div className="text-left">
-        //                 <p>{list.description}</p>
-        //             </div>
-        //             <div className="w-full flex gap-14 text-3xl font-bold py-2">
-        //                 <span>{list.price} $</span>
-        //             </div>
-        //             <div className="flex m-auto gap-14 text-xl font-bold py-2">
-        //                 <Link to={`/artCraft/${list._id}`}>
-        //                     <button className="btn text-xl">View Details</button>
-        //                 </Link>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
         <div>
             <div className="flex border-[1px]">
                 <div className="w-[45%] max-h-[250px]">
@@ -85,7 +54,7 @@ const AdminCard = ({ list }) => {
                             <h1 className="text-2xl font-bold">${price}</h1>
                             <p className="text-2xl">{rating}/5</p>
                         </div>
-                        <div className="flex gap-8">
+                        <div className="flex lg:gap-8">
                             <Link to={`/update/${_id}`}>
                                 <button className="btn btn-primary text-xl">Update</button>
                             </Link>

@@ -15,7 +15,7 @@ const CraftItems = () => {
     return (
         <div className="container mx-auto">
             <h1 className="text-4xl text-center py-16">Craft Items</h1>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 w-fit m-auto">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-8 w-fit m-auto">
                 {
                     itemsLimit.map(item => <Card key={item._id} item={item}></Card>)
                 }

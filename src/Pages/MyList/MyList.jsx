@@ -39,7 +39,7 @@ const MyList = () => {
                     </ul>
                 </details>
             </div>
-            <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-8 w-fit mx-auto mb-16">
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8 w-fit mx-auto mb-16">
                 {
                     item.map(list => <AdminCard key={list._id} list={list}></AdminCard>)
                 }
