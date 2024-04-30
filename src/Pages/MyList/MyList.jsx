@@ -18,11 +18,11 @@ const MyList = () => {
 
     const handleCustom = filter => {
         if (filter === 'customizable') {
-            const findPositive = all.filter(it => it.customization === 'Yes');
+            const findPositive = all?.filter(it => it.customization === 'Yes');
             setItem(findPositive);
         }
         else if (filter === 'nonCustomizable') {
-            const findPositive = all.filter(it => it.customization === 'No');
+            const findPositive = all?.filter(it => it.customization === 'No');
             setItem(findPositive);
         }
     }
@@ -41,7 +41,7 @@ const MyList = () => {
             </div>
             <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-8 w-fit mx-auto mb-16">
                 {
-                    item.map(list => <AdminCard key={list._id} list={list}></AdminCard>)
+                    item?.map(list => <AdminCard key={list._id} list={list}></AdminCard>)
                 }
             </div>
         </div>

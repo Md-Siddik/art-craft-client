@@ -23,7 +23,7 @@ const AllArt = () => {
                         <tbody>
 
                             {
-                                artCrafts.map(items => <tr key={items._id}>
+                                artCrafts?.map(items => <tr key={items._id}>
                                     <td>
                                         <div className="flex items-center gap-3">
                                             <div className="avatar">
